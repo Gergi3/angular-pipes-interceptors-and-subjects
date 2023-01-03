@@ -1,5 +1,2 @@
-<ul>
-    <li *ngFor="let user of users">
-      {{user.name}}
-    </li>
-</ul>
+<button (click)="reloadHandler()">Load users</button>
+<pre>{{users | json}}</pre>

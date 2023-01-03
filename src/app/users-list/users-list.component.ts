@@ -7,16 +7,19 @@ import { UserService } from '../user.service';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
-
-  users!: any[];
+  users!: any[] | null;
 
   constructor(
     private userService: UserService
   ) { }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(users => {
+    this.userService.users$.subscribe(users => {
       this.users = users;
     })
+  }
+
+  reloadHandler() {
+    this.userService.reloadUsers();
   }
 }

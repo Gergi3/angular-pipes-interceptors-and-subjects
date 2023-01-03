@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { authInterceptorProvider } from './auth.interceptor';
 import { UsersListComponent } from './users-list/users-list.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersListComponent
+    UsersListComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
